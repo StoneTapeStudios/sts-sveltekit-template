@@ -1,14 +1,28 @@
 services:
-  db:
+  db_dev:
     image: postgres
+    container_name: sts-sveltekit-template-dev-db
     restart: always
     ports:
-      - 5432:5432
+      - '5432:5432'
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: mysecretpassword
-      POSTGRES_DB: local
+      POSTGRES_DB: sts-sveltekit-template-dev
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - sts_sveltekit_template_dev_data:/var/lib/postgresql/data
+  db_test:
+    image: postgres
+    container_name: sts-sveltekit-template-test-db
+    restart: always
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: sts-sveltekit-template-test
+    volumes:
+      - sts_sveltekit_template_test_data:/var/lib/postgresql/data
 volumes:
-  pgdata:
+  sts_sveltekit_template_dev_data:
+  sts_sveltekit_template_test_data:
