@@ -22,7 +22,7 @@
 		"db:dev:stop": "docker compose stop db_dev",
 		"db:dev:push": "dotenv -e .env.local -- npx drizzle-kit push",
 		"db:dev:migrate": "dotenv -e .env.local -- npx drizzle-kit migrate",
-		"db:dev:generate": "dotenv -e .env.local -- npx drizzle-kit generate",
+		"db:generate": "dotenv -e .env.local -- npx drizzle-kit generate",
 		"db:dev:studio": "dotenv -e .env.local -- npx drizzle-kit studio",
 		"db:test:start": "docker compose up -d db_test",
 		"db:test:stop": "docker compose stop db_test",
