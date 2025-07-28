@@ -14,9 +14,15 @@ importers:
       '@auth/sveltekit':
         specifier: ^1.10.0
         version: 1.10.0(@sveltejs/kit@2.26.1(@sveltejs/vite-plugin-svelte@6.1.0(svelte@5.37.0)(vite@7.0.6(@types/node@22.16.5)(jiti@2.5.1)(lightningcss@1.30.1)))(svelte@5.37.0)(vite@7.0.6(@types/node@22.16.5)(jiti@2.5.1)(lightningcss@1.30.1)))(svelte@5.37.0)
+      adapters:
+        specifier: link:@auth/core/adapters
+        version: link:@auth/core/adapters
       drizzle-orm:
         specifier: ^0.40.0
         version: 0.40.1(gel@2.1.1)(postgres@3.4.7)
+      drizzle-zod:
+        specifier: ^0.8.2
+        version: 0.8.2(drizzle-orm@0.40.1(gel@2.1.1)(postgres@3.4.7))(zod@4.0.10)
       postgres:
         specifier: ^3.4.5
         version: 3.4.7
@@ -1345,6 +1351,12 @@ packages:
         optional: true
       sqlite3:
         optional: true
+
+  drizzle-zod@0.8.2:
+    resolution: {integrity: sha512-9Do/16OjFFNrQDZgvMtxtDDwKWbFOxUAIwNPKX98SfxrP8H18vhN1BvNXbhelLcdgCE7GEaXDJqBjMExSkhpkA==}
+    peerDependencies:
+      drizzle-orm: '>=0.36.0'
+      zod: ^3.25.1
 
   enhanced-resolve@5.18.2:
     resolution: {integrity: sha512-6Jw4sE1maoRJo3q8MsSIn2onJFbLTOjY9hlx4DZXmOKvLRd1Ok2kXmAGXaafL2+ijsJZ1ClYbl/pmqr9+k4iUQ==}
@@ -3173,6 +3185,11 @@ snapshots:
     optionalDependencies:
       gel: 2.1.1
       postgres: 3.4.7
+
+  drizzle-zod@0.8.2(drizzle-orm@0.40.1(gel@2.1.1)(postgres@3.4.7))(zod@4.0.10):
+    dependencies:
+      drizzle-orm: 0.40.1(gel@2.1.1)(postgres@3.4.7)
+      zod: 4.0.10
 
   enhanced-resolve@5.18.2:
     dependencies:

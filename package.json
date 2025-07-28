@@ -70,7 +70,9 @@
 	"dependencies": {
 		"@auth/drizzle-adapter": "^1.10.0",
 		"@auth/sveltekit": "^1.10.0",
+		"adapters": "link:@auth/core/adapters",
 		"drizzle-orm": "^0.40.0",
+		"drizzle-zod": "^0.8.2",
 		"postgres": "^3.4.5",
 		"zod": "^4.0.10"
 	},
