@@ -14,6 +14,6 @@
 				: `/dashboard`
 		}}
 		provider="keycloak"
-		signInPage="signin"
+		signInPage="api/signin"
 	/>
 </div>
