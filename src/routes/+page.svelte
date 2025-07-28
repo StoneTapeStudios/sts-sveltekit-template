@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { SignIn } from '@auth/sveltekit/components';
 	import { page } from '$app/state';
+	import { SignIn } from '@auth/sveltekit/components';
 </script>
 
 <h1 class="py-4 text-center text-2xl font-bold">
