@@ -72,7 +72,7 @@
 	"dependencies": {
 		"@auth/drizzle-adapter": "^1.10.0",
 		"@auth/sveltekit": "^1.10.0",
-		"@tanstack/svelte-query": "^5.83.0",
+		"@tanstack/svelte-query": "https://pkg.pr.new/@tanstack/svelte-query@746b9c5d83e901deb3a5ca7012a4b4e2b617c5e3",
 		"adapters": "link:@auth/core/adapters",
 		"drizzle-orm": "^0.40.0",
 		"drizzle-zod": "^0.8.2",

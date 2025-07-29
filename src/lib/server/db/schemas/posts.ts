@@ -3,6 +3,7 @@ import { createInsertSchema, createSelectSchema, createUpdateSchema } from 'driz
 import type { z } from 'zod';
 import { users } from './users';
 import { ucdTimestamps } from '../columns.helpers';
+import { relations } from 'drizzle-orm';
 
 export const posts = pgTable('post', {
 	id: text('id')
@@ -15,6 +16,13 @@ export const posts = pgTable('post', {
 		.references(() => users.id, { onDelete: 'cascade' }),
 	...ucdTimestamps
 });
+
+export const postsRelations = relations(posts, ({ one }) => ({
+	user: one(users, {
+		fields: [posts.userId],
+		references: [users.id]
+	})
+}));
 
 export const insertPostSchema = createInsertSchema(posts);
 export const selectPostSchema = createSelectSchema(posts);
