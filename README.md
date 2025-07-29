@@ -9,7 +9,7 @@ This starter kit is designed for those who want a clean, extensible foundation f
 - **Framework**: [SvelteKit](https://kit.svelte.dev/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **ORM**: [Drizzle ORM](https://orm.drizzle.team/) with [PostgreSQL](https://www.postgresql.org/)
-- **Authentication**: [Auth.js (SvelteKitAuth)](https://authjs.dev/) (with Keycloak provider)
+- **Authentication**: [Auth.js (SvelteKitAuth)](https://authjs.dev/) (with [Keycloak](https://www.keycloak.org/) provider)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components**: [shadcn-svelte](https://www.shadcn-svelte.com/)
 - **Validation**: [Zod](https://zod.dev/)
