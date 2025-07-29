@@ -1,7 +1,7 @@
 import { drizzle } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
 import * as schema from '../schemas';
-import { testUsers, testPosts } from '../data/example-data';
+import { exampleUsers, examplePosts } from '../data/example-data';
 import dotenv from 'dotenv';
 
 dotenv.config({ path: '.env.local' });
@@ -25,8 +25,8 @@ async function main() {
 
 	// Insert new data
 	console.log('Inserting seed data...');
-	await db.insert(schema.users).values(testUsers);
-	await db.insert(schema.posts).values(testPosts);
+	await db.insert(schema.users).values(exampleUsers);
+	await db.insert(schema.posts).values(examplePosts);
 
 	console.log('Database seeded successfully!');
 

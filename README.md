@@ -37,53 +37,54 @@ Follow these steps to get the project up and running on your local machine.
 
 ### Installation
 
-1.  **Clone the repository:**
+1. **Clone the repository:**
 
-    ```bash
-    git clone https://github.com/your-username/sts-sveltekit-template.git
-    cd sts-sveltekit-template
-    ```
+   ```bash
+   git clone https://github.com/your-username/sts-sveltekit-template.git
+   cd sts-sveltekit-template
+   ```
 
-2.  **Install dependencies:**
+2. **Install dependencies:**
 
-    ```bash
-    pnpm install
-    ```
+   ```bash
+   pnpm install
+   ```
 
-3.  **Configure Environment Variables:**
-    Create a `.env.local` file in the root of the project by copying the example.
+3. **Configure Environment Variables:**
+   Create a `.env.local` file in the root of the project by copying the example.
 
-    ```bash
-    cp .env.local.example .env.local
-    ```
+   ```bash
+   cp .env.local.example .env.local
+   ```
 
-    Update the variables in `.env.local` with your own credentials.
+   Update the variables in `.env.local` with your own credentials.
 
-4.  **Start the Database:**
-    This command will start a PostgreSQL database container using Docker Compose.
+4. **Start the Database:**
+   This command will start a PostgreSQL database container using Docker Compose.
 
-    ```bash
-    pnpm db:up
-    ```
+   ```bash
+   pnpm db:up
+   ```
 
-5.  **Run Database Migrations:**
-    This will apply the database schema to your local database.
+5. **Run Database Migrations:**
+   This will apply the database schema to your local database.
 
-    ```bash
-    pnpm db:dev:push
-    ```
+   ```bash
+   pnpm db:dev:push
+   ```
 
-6.  **(Optional) Seed the Database:**
-    To populate the database with some example data, run:
+6. **(Optional) Seed the Database:**
+   To populate the database with some example data, run:
 
-    ```bash
-    pnpm db:dev:seed
-    ```
+   ```bash
+   pnpm db:dev:seed
+   ```
 
-7.  **Start the Development Server:**
-    ```bash
-    pnpm dev
-    ```
+7. **Start the Development Server:**
+
+   ```bash
+   pnpm dev
+   ```
 
 Your application should now be running at [http://localhost:5173](http://localhost:5173).
 

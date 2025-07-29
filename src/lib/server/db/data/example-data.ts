@@ -1,32 +1,32 @@
 import type { NewPost, NewUser } from '../schemas';
 
-export const testUsers: NewUser[] = [
-	{
-		id: 'e6a88a91-9126-4475-8153-431b9845c818',
-		name: 'John Doe',
-		email: 'john.doe@example.com'
-	},
-	{
-		id: '3699e075-802b-424a-9df4-367c33159074',
-		name: 'Jane Smith',
-		email: 'jane.smith@example.com'
-	}
-];
+const user1 = {
+	id: crypto.randomUUID(),
+	name: 'The Archivist',
+	email: 'alice@example.com'
+};
 
-export const testPosts: NewPost[] = [
+const user2 = {
+	id: crypto.randomUUID(),
+	name: 'The Observer',
+	email: 'bob@example.com'
+};
+
+export const exampleUsers: NewUser[] = [user1, user2];
+
+export const examplePosts: NewPost[] = [
 	{
-		title: 'First Post',
-		content: 'This is the content of the first post by John Doe.',
-		userId: 'e6a88a91-9126-4475-8153-431b9845c818'
+		title: 'Snack-Etude Live',
+		content:
+			// Tim‑and‑Eric style: low-grade cooking demo gone wrong
+			'The host tries to make “Golden Bean Dip” on live cable. He keeps sniffing the mustard, winks at the camera, then his shirt bursts open—revealing too‑tight neon suspenders. The production assistant whispers “We’re short‑sheeted,” and the camera lingers on the mustard jar for twenty seconds. No instructions.',
+		userId: user1.id
 	},
 	{
-		title: 'A second post by John',
-		content: 'This is another post to test with.',
-		userId: 'e6a88a91-9126-4475-8153-431b9845c818'
-	},
-	{
-		title: 'Hello from Jane',
-		content: "Jane Smith's first post on this platform!",
-		userId: '3699e075-802b-424a-9df4-367c33159074'
+		title: 'Late Fee Hotline',
+		content:
+			// faux‑retro infomercial meets awkward small‑town hotline
+			'A man steadies a rotary phone and announces, “Late fees ruin lives.” Behind him, a poorly animated horse frowns. He reads your name wrong for thirty seconds. The static hum crescendos. Then the screen flashes, “Call back tomorrow.” The horse nods awkwardly.',
+		userId: user2.id
 	}
 ];
