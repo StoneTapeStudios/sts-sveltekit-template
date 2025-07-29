@@ -35,20 +35,22 @@
 	/>
 </div>
 
-<div class="prose mx-auto mt-8">
-	<h2>Latest Posts</h2>
+<div class="mx-auto mt-8 max-w-xl">
+	<h2 class="mb-4 text-xl font-semibold">Latest Posts</h2>
 
 	{#if query.isLoading}
 		<p>Loading posts...</p>
 	{:else if query.isError}
 		<p class="text-red-500">Error: {query.error?.message}</p>
 	{:else if posts}
-		<ul>
+		<ul class="space-y-4">
 			{#each posts as post (post.id)}
-				<li>
-					<h3>{post.title}</h3>
-					<p>{post.content}</p>
-					<small>by {post.user.name}</small>
+				<li class="rounded-lg border p-4">
+					<h3 class="text-lg font-semibold">{post.title}</h3>
+					{#if post.content}
+						<p class="mt-2 text-gray-600">{post.content}</p>
+					{/if}
+					<small class="mt-2 block text-sm text-gray-500">by {post.user.name}</small>
 				</li>
 			{/each}
 		</ul>
