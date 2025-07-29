@@ -1,6 +1,6 @@
 # Stone Tape Studios SvelteKit Template
 
-A modern, minimal, and opinionated starter for developers, built with SvelteKit, TypeScript, Drizzle ORM, Tailwind CSS, and Auth.js.
+A modern, minimal, and opinionated starter built with SvelteKit, TypeScript, Drizzle ORM, Tailwind CSS, and Auth.js.
 
 This starter kit is designed for those who want a clean, extensible foundation for building modern, full-stack web applications.
 
